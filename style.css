@@ -1,0 +1,84 @@
+:root {
+  --bg:#0f172a;
+  --panel:#020617;
+  --text:#e5e7eb;
+  --accent:#38bdf8;
+}
+.light {
+  --bg:#f8fafc;
+  --panel:#e5e7eb;
+  --text:#020617;
+}
+body {
+  margin:0;
+  font-family:system-ui;
+  background:var(--bg);
+  color:var(--text);
+}
+header {
+  background:var(--panel);
+  padding:10px 20px;
+  display:flex;
+  justify-content:space-between;
+}
+.container {
+  display:flex;
+  height:calc(100vh - 60px);
+}
+aside {
+  width:30%;
+  padding:15px;
+  background:var(--panel);
+  overflow-y:auto;
+}
+main {
+  width:70%;
+  padding:20px;
+}
+input,select,textarea {
+  width:100%;
+  padding:8px;
+  margin-bottom:10px;
+  background:var(--bg);
+  color:var(--text);
+  border:1px solid #334155;
+  border-radius:6px;
+}
+textarea { height:160px; }
+.shortcut {
+  background:#1e293b;
+  padding:8px;
+  margin-bottom:6px;
+  border-radius:6px;
+  cursor:pointer;
+}
+.shortcut:hover { background:#334155; }
+button {
+  background:var(--accent);
+  border:none;
+  padding:8px 14px;
+  border-radius:6px;
+  cursor:pointer;
+}
+pre,#explain {
+  background:var(--panel);
+  padding:10px;
+  border-radius:6px;
+}
+.progress-bar {
+  height:10px;
+  background:#334155;
+  border-radius:6px;
+}
+#progressFill {
+  height:100%;
+  width:0%;
+  background:#22c55e;
+}
+.buttons button {
+  margin-right: 6px;
+}
+
+#code.try {
+  border: 2px solid #22c55e;
+}

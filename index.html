@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PyShorts | Learn Python by Trying</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+</head>
+
+<body>
+<header>
+  <h1>⚡ PyShorts</h1>
+  <button id="themeBtn">🌙</button>
+</header>
+
+<div class="container">
+
+  <aside>
+    <input id="search" placeholder="Search shortcuts...">
+
+    <select id="category">
+      <option value="All">All Categories</option>
+      <option>Basics</option>
+      <option>Conditionals</option>
+      <option>Loops</option>
+      <option>Lists</option>
+      <option>Strings</option>
+      <option>Tricks</option>
+    </select>
+
+    <select id="level">
+      <option value="All">All Levels</option>
+      <option>Beginner</option>
+      <option>Intermediate</option>
+      <option>Advanced</option>
+    </select>
+
+    <h3>📊 Progress</h3>
+    <div class="progress-bar"><div id="progressFill"></div></div>
+    <div id="progressText"></div>
+
+    <h3>🔥 Daily Streak</h3>
+    <div id="streakBox"></div>
+
+    <h3>🤖 Recommended</h3>
+    <div id="recommend"></div>
+    
+    <h3>📝 Notes</h3>
+    <button id="showNotesBtn" onclick="showNotes()">Show Notes 📚</button>
+    <button id="hideNotesBtn" onclick="hideNotes()">Hide Notes ❌</button>
+
+    <h3>📌 Shortcuts</h3>
+    <div id="shortcutList"></div>
+  </aside>
+
+  <main>
+    <!-- Shortcuts / code editor area -->
+    <div id="shortcutsUI">
+      <textarea id="code"></textarea>
+
+      <div class="buttons">
+        <button onclick="runCode()">▶ Run</button>
+        <button onclick="tryYourself()">🔓 Try Yourself</button>
+        <button onclick="resetCode()">🔄 Reset</button>
+        <button onclick="saveFavorite()">⭐ Save</button>
+      </div>
+
+      <h3>👀 Expected Output</h3>
+      <pre id="expected"></pre>
+
+      <h3>📤 Actual Output</h3>
+      <pre id="output"></pre>
+
+      <h3>🧠 How this code works</h3>
+      <div id="explain"></div>
+
+      <h3>🎯 Challenge</h3>
+      <pre id="challenge"></pre>
+    </div>
+
+    <!-- Notes area (hidden by default) -->
+    <div id="notesUI" style="display:none; padding:10px; overflow-y:auto; max-height:100%;"></div>
+  </main>
+
+</div>
+
+<!-- Include notes and main script at the end -->
+<script src="pythonNotes.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
